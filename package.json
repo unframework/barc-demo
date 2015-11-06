@@ -9,6 +9,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "slack-client": "^1.4.1"
+    "atomic-routes": "^0.4.0",
+    "slack-client": "^1.4.1",
+    "vdom-live": "^1.0.4"
   }
 }
