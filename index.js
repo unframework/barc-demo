@@ -36,3 +36,9 @@ slack.on('error', function(err) {
 });
 
 slack.login();
+
+module.exports = {
+    getCurrentVote: function () {
+        return 'test vote!';
+    }
+};
