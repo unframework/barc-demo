@@ -13,19 +13,23 @@ boxbits.run(function (b) {
     var mainRoute = rootState.whenRoot();
     var tokenRoute = rootState.when('/token');
 
-    return function (screenW, screenH) {
+    function renderTokenScreen() {
+        return b.box(0, 48, b.screenWidth, b.screenHeight);
+    }
+
+    return function () {
         return [
             b.box(0, 0, 48, 48, b.image(32, 32, hamburgerIcon)),
 
-            b.box(48, 0, screenW - 48, 48, b.image(48, 48, topBarLogo)),
+            b.box(48, 0, b.screenWidth - 48, 48, b.image(48, 48, topBarLogo)),
 
             (mainRoute.getIsActive()
-                ? b.box(48, 96, screenW - 96, screenH - 96)
+                ? b.box(48, 96, b.screenWidth - 96, b.screenHeight - 96)
                 : null
             ),
 
             (tokenRoute.getIsActive()
-                ? b.box(0, 48, screenW, screenH)
+                ? renderTokenScreen()
                 : null
             )
         ];
