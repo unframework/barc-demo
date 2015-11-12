@@ -10,8 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "atomic-routes": "^0.4.0",
+    "boxbits": "git@github.com:unframework/boxbits.git#3cb1905",
     "remote-control": "^0.5.0",
-    "slack-client": "^1.4.1",
-    "vdom-live": "^1.0.4"
+    "slack-client": "^1.4.1"
   }
 }
