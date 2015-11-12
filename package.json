@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "atomic-routes": "^0.4.0",
+    "atomic-routes": "^0.5.0",
     "boxbits": "git@github.com:unframework/boxbits.git#e1125a6",
     "remote-control": "^0.5.0",
     "slack-client": "^1.4.1"
