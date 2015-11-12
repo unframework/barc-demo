@@ -19,8 +19,6 @@ document.body.style.height = '100%';
 
 vdomLive(function (renderLive) {
     var dom = renderLive(function(h) {
-        return h('div');
-
         return b.mobilePortrait(
             b.area({ left: 0, top: 0, width: 48, height: 48 }, b.pad(5, b.box({
                 backgroundColor: '#fff', borderRadius: 3
