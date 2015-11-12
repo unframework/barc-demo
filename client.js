@@ -14,13 +14,11 @@ boxbits.run(function (b) {
         console.log('avatar!');
     });
 
-    return function () {
+    return function (screenW, screenH) {
         return [
-            b.area({ left: 0, top: 0, width: 48, height: 48 }, b.pad(5, b.box({
-                backgroundColor: '#fff', borderRadius: 3
-            }, b.image(32, 32, hamburgerIcon)))),
-            b.area({ right: 0, top: 0, width: 48, height: 48 }),
-            b.area({ left: 48, top: 0, right: 48, height: 48 }, b.image(48, 48, topBarLogo))
+            b.box(0, 0, 48, 48, b.image(32, 32, hamburgerIcon)),
+
+            b.box(48, 0, screenW - 48, 48, b.image(48, 48, topBarLogo))
         ];
     };
 });
