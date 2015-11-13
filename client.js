@@ -24,18 +24,18 @@ boxbits.run(function (b) {
         }
 
         // otherwise, a real false
-        return b.box(0, 48, b.screenWidth, b.screenHeight - 48,
+        return b.box(
             b.text('Slack token not set up yet').at(0, 96, b.screenWidth, 64),
             b.button('Set Up Slack Token', function () {
                 window.location = '#/token';
             }).at(0, 160, b.screenWidth, 64)
-        );
+        ).at(0, 48, b.screenWidth, b.screenHeight - 48);
     }
 
     function renderTokenScreen() {
-        return b.box(0, 48, b.screenWidth, b.screenHeight - 48,
+        return b.box(
             b.text('Enter Slack token to connect').at(0, 96, b.screenWidth, 64)
-        );
+        ).at(0, 48, b.screenWidth, b.screenHeight - 48);
     }
 
     return function () {
@@ -48,7 +48,7 @@ boxbits.run(function (b) {
                 : (isSetup
                     ? [
                         (mainRoute.getIsActive()
-                            ? b.box(48, 96, b.screenWidth - 96, b.screenHeight - 96)
+                            ? b.box().at(48, 96, b.screenWidth - 96, b.screenHeight - 96)
                             : null
                         )
                     ]
