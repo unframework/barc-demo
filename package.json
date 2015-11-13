@@ -11,7 +11,7 @@
   "dependencies": {
     "atomic-routes": "^0.5.0",
     "bluebird": "^3.0.5",
-    "boxbits": "git@github.com:unframework/boxbits.git#b24dded",
+    "boxbits": "git@github.com:unframework/boxbits.git#665e019",
     "remote-control": "^0.5.0",
     "slack-client": "^1.4.1"
   }

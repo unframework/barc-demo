@@ -34,7 +34,14 @@ boxbits.run(function (b) {
 
     function renderTokenScreen() {
         return b.box(
-            b.text('Enter Slack token to connect').at(0, 96, b.screenWidth, 64)
+            b.text('Enter Slack token to connect').at(0, 96, b.screenWidth, 64),
+            b.form(
+                b.field('Paste token here').at(96, 96, b.screenWidth - 96 * 2, 64),
+                b.submit('Connect to Slack').at(96, 160, b.screenWidth - 96 * 2, 64),
+                function (token) {
+                    console.log('token', token);
+                }
+            )
         ).at(0, 48, b.screenWidth, b.screenHeight - 48);
     }
 
