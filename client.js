@@ -20,31 +20,28 @@ boxbits.run(function (b) {
     function renderNonSetupScreen() {
         // not sure yet...
         if (isSetup === null) {
-            return b.box(0, 48, b.screenWidth, b.screenHeight - 48,
-                b.text('Loading...')
-            );
+            return b.text('Loading...').at(0, 48, b.screenWidth, b.screenHeight - 48);
         }
 
         // otherwise, a real false
         return b.box(0, 48, b.screenWidth, b.screenHeight - 48,
-            b.box(0, 96, b.screenWidth, 64, b.text('Slack token not set up yet')),
-            b.box(0, 160, b.screenWidth, 64, b.button('Set Up Slack Token', function () {
+            b.text('Slack token not set up yet').at(0, 96, b.screenWidth, 64),
+            b.button('Set Up Slack Token', function () {
                 window.location = '#/token';
-            }))
+            }).at(0, 160, b.screenWidth, 64)
         );
     }
 
     function renderTokenScreen() {
         return b.box(0, 48, b.screenWidth, b.screenHeight - 48,
-            b.box(0, 96, b.screenWidth, 64, b.text('Enter Slack token to connect'))
+            b.text('Enter Slack token to connect').at(0, 96, b.screenWidth, 64)
         );
     }
 
     return function () {
         return [
-            b.box(0, 0, 48, 48, b.image(32, 32, hamburgerIcon)),
-
-            b.box(48, 0, b.screenWidth - 48, 48, b.image(48, 48, topBarLogo)),
+            b.image(32, 32, hamburgerIcon).at(0, 0, 48, 48),
+            b.image(48, 48, topBarLogo).at(48, 0, b.screenWidth - 48, 48),
 
             tokenRoute.getIsActive()
                 ? renderTokenScreen()
